@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интерактивный научный тренажёр о корреляции, причинности и силе доказательств">
+  <title>Лаборатория причинности</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310151b'/%3E%3Ccircle cx='18' cy='20' r='6' fill='%23c8ff66'/%3E%3Ccircle cx='46' cy='44' r='6' fill='%23ff7a66'/%3E%3Cpath d='M23 24L41 40' stroke='%23eaf0f4' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="В начало">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+      <span>Лаборатория причинности</span>
+    </a>
+    <div class="run-status">
+      <span id="stageLabel">Протокол 01 / 10</span>
+      <div class="progress-track" aria-label="Прогресс"><span id="progressFill"></span></div>
+      <button class="icon-button" id="resetButton" type="button" title="Сбросить прогресс" aria-label="Сбросить прогресс">↺</button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="case-index" aria-label="Навигация по протоколам">
+      <div class="index-heading">Досье</div>
+      <ol id="moduleNav"></ol>
+      <div class="evidence-key">
+        <span><i class="dot dot-data"></i> данные</span>
+        <span><i class="dot dot-idea"></i> гипотеза</span>
+      </div>
+    </aside>
+
+    <main id="app" tabindex="-1"></main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="cases.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
